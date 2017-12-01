@@ -1,8 +1,6 @@
-.navbar { margin:0 0 20px 0; padding:0; color:#fff; } 
-.navbar .tagline { position:relative; top:11px; } 
-.navbar .brand { padding: 7px 20px 7px;}
-.navbar .pull-right { position:relative; top:8px; } 
-.navbar .pull-right a {color: #F48821;}
+.main-content {
+	margin-top:15px;
+}
 
 .dark {
 	background: rgb(20,20,25);
@@ -35,9 +33,9 @@
 .nav-list {padding-right: 0;	 }
 .nav-list>li>a, .nav-list .nav-header {margin-right:0;}
 .nav-list>li>a.treeLink {padding-left:20px;}
-.nav-list a { word-wrap: break-word; font-size:14px; text-shadow: none!important;}
+.nav-list a { overflow: hidden; font-size:14px; text-shadow: none!important;}
 .nav-list>.active>a.treeLink, .nav-list>.active>a.treeLink:hover, .nav-list>.active>a.treeLink:focus {
-	background:#F48821;
+	background:#999;
 	color:#fff;
 }
 
@@ -54,7 +52,10 @@
 /** Footer sitemap **/
 footer{
 	margin-top:40px;
-	font-size:12px;
+	font-size:14px;
+}
+.section.site-footer {
+	border-bottom: 0px;
 }
 .copyright {
 	padding: 6px;
@@ -62,7 +63,7 @@ footer{
 	text-align:center;
 	margin: 40px 0;
 }
-.dark .copyright .hf-link { color:#F48821; }
+.dark .copyright a { color:#F48821; }
 
 /* .doc { margin-top:16px; } */
 .toggle-hide { display:block; }
@@ -215,6 +216,14 @@ h6 {
   padding-left:20px;
 }
 
+table.params {
+  border-left: 5px solid #eeeeee;
+  margin-left: 20px;
+}
+table.params th {
+  background:#fcfcfc;
+}
+
 .doc-main {
   margin-bottom: 40px;
 }
@@ -223,6 +232,24 @@ h6 {
 
 .section {
   border-bottom: 1px solid #eee;
+}
+
+.table p {
+  margin: 3px 0;
+}
+
+.table th, .table td {
+  border-top: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.table a small {
+  color: #666;
+}
+
+.table .fa {
+  color: rgb(200,200,200);
+  margin-right:5px;
 }
 
 .javadoc {
@@ -234,7 +261,6 @@ h6 {
 .inline-content * {
   display: inline;
 }
-
 /**
  * Stuff for input-block-level:
  * http://stackoverflow.com/questions/13306670/bootstrap-prepended-and-appended-input-how-to-max-input-field-width
@@ -270,6 +296,7 @@ h6 {
 }
 .field + .field {
   border-top: 1px solid #eee;
+  margin-top: 10px;
 }
 .fields {
   margin-left: 40px;
@@ -303,4 +330,29 @@ pre.example:before {
   -webkit-border-radius: 4px 0;
   border-radius: 4px 0;
   border: 1px solid rgba(0,0,0,0.15);
+}
+
+.inherited-fields {
+  padding: 5px 20px;
+  margin-top:1em;
+  background:#fcfcfc;
+}
+
+@media (max-width: 767px) {
+  .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .navbar .divider { 
+    display: none;
+  }
+  
+  .main-content {
+    margin-top:0px;
+  }
+}
+@media (max-width: 979px) {
+  .main-content {
+    margin-top:15px;
+  }
 }
